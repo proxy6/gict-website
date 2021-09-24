@@ -974,9 +974,7 @@
 }
 
 @media only screen and (max-width: 599px){
-	.banner-section-three .content h1 span{
-		color: white;
-	}
+	
 	.main-slider .price,
 	.main-slider h3.light{
 		font-size:26px;
@@ -1073,7 +1071,9 @@
 }
 
 @media only screen and (max-width: 479px) {
-	
+	.banner-section-three .content h1 span{
+		color: white;
+	}
 	.main-header .search-box-outer .dropdown-menu{
 		top:44px;	
 	}
