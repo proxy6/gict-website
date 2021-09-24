@@ -1199,6 +1199,6 @@
 }
 @media only screen and (max-width: 380px) {
 	.banner-section-three .content h1 span{
-		color: white;
+		color:black;
 	}
 }
