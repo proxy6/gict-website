@@ -5524,8 +5524,8 @@ img{
 	width:100%;
 	height:100%;
 	display:block;
-	background-color:#1700a0;
-	background:url(../images/background/9.png);
+	background-color:#17DA9B;
+	background:url(../images/background/layer-2.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -5538,7 +5538,7 @@ img{
 
 .error-section .inner-section h1{
 	position:relative;
-	color:#ffffff;
+	color: rgba(0, 0, 0, 0.527);
 	font-weight:700;
 	line-height:1.2em;
 }
@@ -5555,7 +5555,7 @@ img{
 
 .error-section .inner-section h3{
 	position:relative;
-	color:#ffffff;
+	color:rgba(0, 0, 0, 0.527);
 	font-weight:700;
 	line-height:1.2em;
 	font-style:italic;
@@ -5573,12 +5573,12 @@ img{
 	left:15px;
 	bottom:20px;
 	right:15px;
-	color:#ffffff;
+	color: rgba(0, 0, 0, 0.527);
 	font-size:14px;
 }
 
 .error-section .inner-section .copyright a{
-	color:#ff8342;
+	color:rgba(0, 0, 0, 0.527);
 }
 
 
