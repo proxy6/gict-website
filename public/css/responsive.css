@@ -26,12 +26,14 @@
 		margin-left:0px;
 	}
 	
+	
 }
 
 @media only screen and (max-width: 1499px){
 	.testimonial-section-two{
 		margin-top:350px;
 	}
+	
 }
 
 @media only screen and (max-width: 1340px){
@@ -40,6 +42,7 @@
 		overflow:hidden;	
 	}
 	
+	
 }
 
 @media only screen and (max-width: 1140px){
@@ -47,6 +50,7 @@
 	.main-header{
 		margin:0px !important;
 	}
+	
 	
 	.services-carousel-section .outer-container:before,
 	.services-carousel-section .outer-container:after{
@@ -262,8 +266,12 @@
 	}
 	
 	.banner-section-three .content h1{
-		color:#ffffff;
+		color:black;
 	}
+	.banner-section-three .content h1 span{
+		color: rgb(5, 4, 4);
+	}
+	
 	
 	.banner-section-three .content .btn-box .btn-style-six{
 		color:#222222;
@@ -738,7 +746,7 @@
 		padding: 0px;
 		text-align: center;
 		border-radius: 0px;
-	    background: none;
+	    background-color: #17DA9B;
 		border: 1px solid #ffffff;
 	}
 	
@@ -966,7 +974,9 @@
 }
 
 @media only screen and (max-width: 599px){
-	
+	.banner-section-three .content h1 span{
+		color: white;
+	}
 	.main-slider .price,
 	.main-slider h3.light{
 		font-size:26px;
