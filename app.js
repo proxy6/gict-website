@@ -17,12 +17,16 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res)=>{
     res.render('index')
 })
+//services route
+app.get('/services/digital-currency', (req, res)=>{
+    res.render('services/digital-currency')
+})
+app.use('/contact', contact)
 
 //not found error route
 app.get('*', (req, res)=>{
     res.render('not-found')
 })
-app.use('/contact', contact)
 const port = process.env.PORT || 3000
 app.listen(port, ()=>{
     console.log('server started on port ' + port)
