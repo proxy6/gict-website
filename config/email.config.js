@@ -58,7 +58,7 @@ console.log(output)
     })
     
     let info = await transporter.sendMail({
-        from: `"GICT Website", <${process.env.EMAIL_USER}>`,
+        from: `'"GICT Website", <${process.env.EMAIL_USER}>'`,
         to: 'gictacademy@gmail.com',
         subject: "Contact Info",
         html: output // html body
