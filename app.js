@@ -2,6 +2,8 @@ const express = require('express')
 const ejs = require('ejs');
 const path = require('path')
 const app = express();
+require('dotenv').config()
+const {contact} = require('./config/email.config')
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -20,6 +22,7 @@ app.get('/', (req, res)=>{
 app.get('*', (req, res)=>{
     res.render('not-found')
 })
+app.use('/contact', contact)
 const port = process.env.PORT || 3000
 app.listen(port, ()=>{
     console.log('server started on port ' + port)
