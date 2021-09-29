@@ -3,8 +3,8 @@ const ejs = require('ejs');
 const path = require('path')
 const app = express();
 require('dotenv').config()
-const {contact} = require('./config/email.config')
-
+const contact = require('./router/contact.routes')
+const service = require('./router/services.routes')
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -18,10 +18,9 @@ app.get('/', (req, res)=>{
     res.render('index')
 })
 //services route
-app.get('/services/digital-currency', (req, res)=>{
-    res.render('services/digital-currency')
-})
 app.use('/contact', contact)
+app.use('/services', service)
+
 
 //not found error route
 app.get('*', (req, res)=>{

@@ -3,28 +3,6 @@ const express = require('express')
 const app = express();
 
 exports.contact= async (req, res) => {
-    
-/* const receivers_email = 'gictacademy@gmail.com'
-const host_options={
-    host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
-    secure: true,
-    auth:{
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-}
-
-const message_options={
-    from: '"GICT" <progress@gmail.com>',
-    to: receivers_email,
-    subject: req.body.subject,
-    text: {
-        name: req.body.name,
-        message:req.body.message
-    }
-} */
-
 const output = `
 <p>You have a new contact information</p>
 <h3>Contact Details</h3>
