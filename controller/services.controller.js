@@ -58,9 +58,11 @@ exports.postCryptoPage = async(req, res)=>{
     
            
         })
-     
     
-    
+    }
+
+    exports.getCrackedAppsPage = (req, res)=>{
+        res.render('services/cracked-apps')
     }
     
  

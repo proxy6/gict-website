@@ -5,6 +5,7 @@ const app = express();
 require('dotenv').config()
 const contact = require('./router/contact.routes')
 const service = require('./router/services.routes')
+const portfolio = require('./router/project.routes')
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -20,6 +21,7 @@ app.get('/', (req, res)=>{
 //services route
 app.use('/contact', contact)
 app.use('/services', service)
+app.use('/portfolio', portfolio)
 
 
 //not found error route

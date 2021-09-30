@@ -6,6 +6,7 @@ exports.contact= async (req, res) => {
     <ul>
     <li>Name: ${req.body.name}</li>
     <li>Email: ${req.body.email}</li>
+    <li>Service: ${req.body.service}</li>
     <li>Date: ${new Date()}</li>
     </ul>
     <h3>Message:</h3>

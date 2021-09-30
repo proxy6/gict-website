@@ -1,7 +1,8 @@
 const express = require('express');
-const Router = express.Router()
-const {getCryptoPage, postCryptoPage} = require('../controller/services.controller')
+const router = express.Router()
+const {getCryptoPage, postCryptoPage, getCrackedAppsPage} = require('../controller/services.controller')
 
-Router.get('/digital-currency', getCryptoPage)
-Router.post('/digital-currency', postCryptoPage)
-module.exports = Router;
+router.get('/digital-currency', getCryptoPage)
+router.post('/digital-currency', postCryptoPage)
+router.get('/cracked-apps', getCrackedAppsPage)
+module.exports = router;
