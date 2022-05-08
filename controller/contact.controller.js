@@ -9,6 +9,7 @@ exports.contact= async (req, res) => {
     verifyCaptcha(data, async (err, resp)=>{
         if(err) return res.json({data:'an error'})
 
+        
         const output = `
         <p>You have a new contact information</p>
         <h3>Contact Details</h3>
