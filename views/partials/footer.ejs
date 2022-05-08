@@ -95,6 +95,37 @@
 <script src="/js/mixitup.js"></script>
 <script src="/js/script.js"></script>
 <script src="/js/scrollspy.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+<script>
+	$('#contact_form').submit(function(e) {
+ 
+ 	var dataString = $(this).serialize();
+		console.log(dataString)
+ 	// alert(dataString); return false;
+
+	 $.ajax({
+   	type: "POST",
+   	url: "/contact",
+   	data: dataString,
+   	success: function () {
+	 $("#contact_form").html("<div id='message'></div>");
+	 $("#message")
+	   .html("<h2>Contact Form Submitted!</h2>")
+	   .append("<p>We will be in touch soon.</p>")
+	   .hide()
+	   .fadeIn(1500, function () {
+		 $("#message").append(
+		   "<img id='checkmark' src='images/check.png' />"
+		 );
+	   });
+   }
+ });
+
+ e.preventDefault();
+});
+  </script>
 
 </body>
 </html>

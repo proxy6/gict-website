@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy GICT Website
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Copy file via scp
       uses: appleboy/scp-action@master
@@ -51,5 +51,7 @@ jobs:
           rm -rf sync.js && \
           # upload new ENV
           echo "${{secrets.ENV}}" > .env && \
+          # run migrations
+          npm run migrate:run && \
           # restart server
           pm2 startOrReload ecosystem.config.js
