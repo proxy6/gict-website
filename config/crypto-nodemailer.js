@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer')
 const express = require('express')
 const app = express();
 
+
 exports.crypto= async (req, res) => {
 const output = `
 <p>I want to buy cyptocurrency</p>
