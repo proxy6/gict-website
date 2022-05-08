@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer')
 exports.email= async (req, res) => {
 
+    
     // create an object variable output with details of the message
     let transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
