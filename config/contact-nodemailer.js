@@ -15,6 +15,7 @@ const output = `
 <p>${req.body.message}</p>
 `
 
+
 console.log(output)
     let transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
