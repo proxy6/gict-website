@@ -18,6 +18,7 @@ jobs:
       env:
         HOST: ${{ secrets.SSH_HOST }}
         USERNAME: ${{ secrets.SSH_USER }}
+        PASSWORD: ${{ secrets.SSH_PASS }}
         KEY: ${{ secrets.SSH_KEY }}
       with:
         source: "./"
@@ -51,7 +52,5 @@ jobs:
           rm -rf sync.js && \
           # upload new ENV
           echo "${{secrets.ENV}}" > .env && \
-          # run migrations
-          npm run migrate:run && \
           # restart server
           pm2 startOrReload ecosystem.config.js
